@@ -436,5 +436,5 @@ set -g @continuum-restore 'on'
 # # /!\ do not remove the previous line
 # colin added this
 # if run as "tmux attach", create a session if one does not already exist
-408 new-session -n $HOST
+#408 new-session -n $HOST ###does not seem to be working
 
