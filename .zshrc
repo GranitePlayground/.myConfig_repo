@@ -26,10 +26,10 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias lla='ls -al'
-#
 # clear 
 alias cl='clear'
-#
+# exit
+alias ex='exit'
 ###
 
 # plugin alias
