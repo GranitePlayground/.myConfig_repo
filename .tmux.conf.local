@@ -93,7 +93,7 @@ tmux_conf_theme_window_bg="default"
 tmux_conf_theme_highlight_focused_pane=false
 
 # focused pane colours:
-tmux_conf_theme_focused_pane_bg="$tmux_conf_theme_colour_2"
+tmux_conf_theme_focused_pane_bg="$tmux_conf_theme_colour_14" ###colin
 
 # pane border style, possible values are:
 #   - thin (default)
@@ -101,12 +101,12 @@ tmux_conf_theme_focused_pane_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
-tmux_conf_theme_pane_border="$tmux_conf_theme_colour_2"
-tmux_conf_theme_pane_active_border="$tmux_conf_theme_colour_4"
+tmux_conf_theme_pane_border="$tmux_conf_theme_colour_4" ###colin
+tmux_conf_theme_pane_active_border="$tmux_conf_theme_colour_16" ###colin
 
 # pane indicator colours (when you hit <prefix> + q)
-tmux_conf_theme_pane_indicator="$tmux_conf_theme_colour_4"
-tmux_conf_theme_pane_active_indicator="$tmux_conf_theme_colour_4"
+tmux_conf_theme_pane_indicator="$tmux_conf_theme_colour_9" ###colin
+tmux_conf_theme_pane_active_indicator="$tmux_conf_theme_colour_16" ###colin
 
 # status line style
 tmux_conf_theme_message_fg="$tmux_conf_theme_colour_1"
@@ -359,12 +359,13 @@ bind -n S-Right next-window
 # Set easier window split keys
 bind-key v split-window -h
 bind-key h split-window -v
-#
 ###
-
+###colin other configs
 # move status line to top
-set -g status-position top
-
+set -g status-position top ###colin
+#
+#set pane number display timing '<prefix> + q'
+set -g display-panes-time 2500 ###colin
 
 # -- tpm -----------------------------------------------------------------------
 
