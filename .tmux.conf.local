@@ -338,7 +338,11 @@ tmux_conf_copy_to_os_clipboard=false
 # this is the place to override or undo settings
 
 # increase history size
-#set -g history-limit 10000
+set -g history-limit 5000
+
+# set default shell to zsh ###cr added from elsewhare
+set-option -g default-shell /usr/bin/zsh ###cr
+set-option -g default-terminal screen-256color ###cr
 
 ### start with mouse mode enabled
 set -g mouse on
@@ -378,15 +382,11 @@ set -g status-position top ###
 #set pane number display timing '<prefix> + q'
 set -g display-panes-time 2500 ###cr
 #
-# set default shell to zsh ###cr added from elsewhare
-set-option -g default-shell /usr/bin/zsh 
-set-option -g default-terminal screen-256color
-#
 # the only time it makes sense to begin indexing at 1. ###cr added from elsewhare
 set -g base-index 1
 #
 # window list - Centered ###cr 
-#set-option -g status-justify centre ###cr duplicated above
+#set-option -g status-justify centre ###cr duplicated above here for consistancey
 
 # -- tpm -----------------------------------------------------------------------
 
