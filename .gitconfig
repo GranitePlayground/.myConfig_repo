@@ -23,7 +23,7 @@
     co = "checkout"
     st = "status"
     br = "branch"
-    ci = "commit"
+    ci = "commit"  ###colin - figure out how to add -m to this
     d = "diff"
 
     # Log that shows titles of last 16 commits
