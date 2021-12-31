@@ -230,8 +230,8 @@ tmux_conf_theme_right_separator_main='\uE0B2' ###cr #   Powerline symbols or the
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" ❐ #S | ~#{loadavg}| , #{mouse},  #{prefix} ,       " ###cr removed time spaces & added loadavg & ~
-tmux_conf_theme_status_right=" #{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}, %R , %d %b | #{username}#{root} | #{hostname} "
+tmux_conf_theme_status_left=" ❐ #S |#{cpu_fg_color} CPU:#{cpu_percentage} , #{ram_fg_color}RAM:#{ram_percentage} , #{mouse},  #{prefix} ,      " ###cr removed time spaces & added loadavg & ~
+tmux_conf_theme_status_right=" #{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},},  %a %h-%d  , %R  | #{username}#{root} | #{hostname} "
 #tmux_conf_theme_status_right=" #{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}#{↑#{?uptime_y,#{uptime_y}y,}#{?uptime_d,#{uptime_d}d,}#{?uptime_h,#{uptime_h}h,}#{?uptime_m,#{uptime_m}m ,}}, %R , %d %b | #{username}#{root} | #{hostname} "
 
 ##  load average ###cr creator ###cr does not seem to work
@@ -241,7 +241,7 @@ tmux_conf_theme_status_right=" #{pairing}#{synchronized}#{?battery_status,#{batt
 #tmux_conf_theme_loadavg_attr="none" ###cr
 
 # status left style
-tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_9" ###cr
+tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_9" ###cr
 tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_2,$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_15" ###cr
 tmux_conf_theme_status_left_attr="bold,none,none"
 
@@ -257,14 +257,14 @@ tmux_conf_theme_pairing_bg="none"
 tmux_conf_theme_pairing_attr="none"
 
 # prefix indicator
-tmux_conf_theme_prefix="⌘⌘⌘" ###cr
+tmux_conf_theme_prefix="|⌘0⌘|" ###cr
 tmux_conf_theme_prefix_fg="$tmux_conf_theme_colour_10"
 tmux_conf_theme_prefix_bg="none"
 tmux_conf_theme_prefix_attr="none"
 
 # mouse indicator
 tmux_conf_theme_mouse="↖︎" ###cr
-tmux_conf_theme_mouse_fg="$tmux_conf_theme_colour_11" ###cr
+tmux_conf_theme_mouse_fg="$tmux_conf_theme_colour_10" ###cr
 tmux_conf_theme_mouse_bg="none"
 tmux_conf_theme_mouse_attr="none"
 
@@ -388,6 +388,10 @@ set -g base-index 1
 # window list - Centered ###cr 
 #set-option -g status-justify centre ###cr duplicated above here for consistancey
 
+######### TESTING ###########
+# tmux.cpu
+#tmux__theme_status_left
+
 # -- tpm -----------------------------------------------------------------------
 
 # while I don't use tpm myself, many people requested official support so here
@@ -428,6 +432,7 @@ set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @continuum-restore 'on'
+#set -g @plugin 'thewtex/tmux-mem-cpu-load'
 
 
 # -- custom variables ----------------------------------------------------------
@@ -458,5 +463,5 @@ set -g @continuum-restore 'on'
 # # /!\ do not remove the previous line
 # colin added this
 # if run as "tmux attach", create a session if one does not already exist
-#408 new-session -n $HOST ###does not seem to be working
+ new-session -n $HOST ###cr (maybe working)
 
