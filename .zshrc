@@ -40,8 +40,24 @@ alias myConfig='/usr/bin/git --git-dir=$HOME/.myConfig_repo/ --work-tree=$HOME'
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+# for ZSH
+case "$OSTYPE" in
+  darwin19.0)
+    source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme  #Bernard - MacBook Air
+  ;;
+  darwin21.0)
+  source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme  #Laverne - M1Mini
+  ;;
+#  linux*)
+    # ...
+#  ;;
+#  dragonfly*|freebsd*|netbsd*|openbsd*)
+    # ...
+#  ;;
+esac
+
+#source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme  #Laverne - M1Mini
+#source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme  #Bernard - MacBook Air
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-alias config='/usr/bin/git --git-dir=/Users/colin/.myConfig_repo/ --work-tree=/Users/colin'
