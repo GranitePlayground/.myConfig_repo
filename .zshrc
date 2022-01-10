@@ -11,7 +11,7 @@ fi
 #
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias ll='ls -l --color=auto'
     alias la='ls -A --color=auto'
@@ -27,10 +27,10 @@ fi
 #
 # common ls 
 ###  redundent above in this case
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-#alias lla='ls -al'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+alias lla='ls -al'
 
 # clear 
 alias cl='clear'
