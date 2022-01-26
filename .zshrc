@@ -28,14 +28,16 @@ fi
 # common ls 
 ###  redundent above in this case
 alias ll='ls -l'
-alias la='ls -A'
+alias la='ls -a'
 alias l='ls -CF'
-alias lla='ls -al'
+alias lla='ls -Al'
 
 # clear 
 alias cl='clear'
 # exit
 alias ex='exit'
+# SSH Agent
+alias ssha='eval $(ssh-agent) && ssh-add'
 ###
 
 # plugin alias
