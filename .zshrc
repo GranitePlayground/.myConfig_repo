@@ -32,6 +32,8 @@ alias la='ls -a'
 alias l='ls -CF'
 alias lla='ls -Al'
 
+alias ..='cd ..'
+
 # clear 
 alias cl='clear'
 # exit
