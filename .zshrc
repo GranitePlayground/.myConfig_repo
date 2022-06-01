@@ -50,6 +50,10 @@ alias myConfig='/usr/bin/git --git-dir=$HOME/.myConfig_repo/ --work-tree=$HOME'
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+#crPATH
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+
 # for ZSH
 case "$OSTYPE" in
   darwin19.0)
