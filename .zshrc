@@ -40,6 +40,8 @@ alias cl='clear'
 alias ex='exit'
 # SSH Agent
 alias ssha='eval $(ssh-agent) && ssh-add'
+# Emacs Client
+alias emacs="emacsclient -c -a 'emacs'"
 ###
 
 # plugin alias
@@ -52,7 +54,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #crPATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
-
+export PATH="$PATH:/usr/local/smlnj/bin"
 
 # for ZSH
 case "$OSTYPE" in
